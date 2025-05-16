@@ -1,0 +1,124 @@
+:root {
+    --primary: #88C057;
+    --background-color: #F3F4ED;
+  }
+  
+  body {
+    background-color: var(--background-color);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .heading h1 {
+    font-family: 'Rancho', cursive;
+    color: var(--primary);
+
+    font-weight: 400;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 80px;
+  }
+  
+  /* Mobile */
+  @media (max-width: 600px) {
+    .heading h1 {
+      font-size: 8vw;
+    }
+  }
+  
+  /* Tablet */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .heading h1 {
+      font-size: 6vw;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1025px) {
+    .heading h1 {
+      font-size: 4vw;
+    }
+  }
+  
+  
+  /* Cards Grid Layout */
+  .cards-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+    justify-items: center;
+  }
+  
+  /* Responsive grid columns */
+  @media (min-width: 601px) {
+    .cards-content {
+        font-size: 200px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .cards-content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .heading h1{
+        
+    }
+  }
+  
+  .card {
+    background-color: white;
+    width: 100%;
+    max-width: 374px;
+    height: 560px;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-content img {
+    width: 246px;
+    height: 244px;
+    margin-top: 30px;
+    object-fit: cover;
+  }
+  
+  .card-content p {
+    margin-top: 20px;
+    width: 80%;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .card-content button {
+    margin-top: 50px;
+    padding: 20px 30px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .card-content button:hover {
+    background-color: #78ac4e;
+    transition: 0.5s ease;
+  }
+  
